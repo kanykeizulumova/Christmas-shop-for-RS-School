@@ -352,3 +352,37 @@ header {
   flex-direction: row;
   justify-self: center
 }
+
+.santa-about {
+  border-radius: 20px;
+  border-style: none;
+  height: 528px;
+}
+
+.abt-container {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 0;
+  justify-content: center;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  gap: 20px;
+  padding: 60px 100px;
+}
+
+.about-text>.caption {
+  color: var(--primary);
+  margin: 0;
+}
+
+.about-text>.abt-p {
+  margin: 0;
+}
+
+.about-text>h2 {
+  margin: 0;
+}
