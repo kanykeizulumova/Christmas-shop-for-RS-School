@@ -109,6 +109,8 @@ p {
 
 .main {
   background-color: var(--primary);
+  background-image: url('../../assets/bg-snow.png');
+  background-repeat: repeat;
 }
 
 body {
@@ -385,4 +387,53 @@ header {
 
 .about-text>h2 {
   margin: 0;
+}
+
+.slider-container {
+  margin: 60px 82px;
+  max-width: 1276px;
+  gap: 20px;
+  color: var(--static-white);
+}
+
+.slider-texts {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.slider-texts>p,
+.slider-texts>h2 {
+  margin: 0 0;
+}
+
+.row-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+.slider-image-container>img {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+}
+
+.slider-arrow {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+}
+
+.arrow-left,
+.arrow-right {
+  background-color: var(--primary);
+  width: 56px;
+  height: 56px;
+  border-radius: 20px;
+  border: 1px solid var(--static-white, #FFFFFF)
 }
