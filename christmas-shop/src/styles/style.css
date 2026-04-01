@@ -1,1 +1,108 @@
 /* Main styles */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+:root {
+  --primary: #FF4646;
+  --primary10: #FF46461A;
+  --dark: #181C29;
+  --static-white: #FFFFFF;
+  --static-white40: #FFFFFF66;
+  --static-white20: #FFFFFF33;
+  --tag-purple: #4361FF;
+  --tag-pink: #FF43F7;
+  --tag-green: #06A44F;
+  --content-background: #ECF3F8;
+  --overlay: #181C29CC;
+  --main-font: 'Montserrat';
+  --side-font: 'Allura';
+}
+
+
+h1 {
+  font-family: var(--main-font);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 18%;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: var(--main-font);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 152%;
+  letter-spacing: 16%;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: var(--main-font);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 152%;
+  letter-spacing: 8%;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-family: var(--main-font);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 5%;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: var(--main-font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 148%;
+  /*paragraph*/
+}
+
+.action-large {
+  /*text action large*/
+  font-family: var(--main-font);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 152%;
+  letter-spacing: 16%;
+  text-transform: uppercase;
+}
+
+.action-small {
+  /*text action small*/
+  font-family: var(--main-font);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 5%;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.caption {
+  font-family: var(--side-font);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 5%;
+}
+
+.slider-text {
+  font-family: var(--main-font);
+  font-size: 80px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
