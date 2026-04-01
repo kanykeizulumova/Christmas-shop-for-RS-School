@@ -106,3 +106,114 @@ p {
   font-weight: 600;
   text-transform: uppercase;
 }
+
+.main {
+  background-color: var(--primary);
+}
+
+
+.footer-container {
+  margin: 60px 82px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  cursor: pointer;
+}
+
+.footer-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  border-radius: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-santa,
+.footer-tree,
+.footer-snake {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  border-radius: 20px;
+  background-color: var(--content-background);
+}
+
+.santa-card,
+.christmas-tree,
+.snake-card {
+  width: 80px;
+  height: 80px;
+  margin-top: 20px;
+  margin-left: 168.67px;
+  margin-right: 168.67px;
+}
+
+.action-large {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.footer-header {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+  justify-content: center;
+}
+
+.footer-santa:hover,
+.footer-tree:hover,
+.footer-snake:hover {
+  background: #06A44F1A;
+}
+
+.socials-container {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  justify-content: center;
+}
+
+.social-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+
+.social-card:hover {
+  background: #06A44F1A;
+}
+
+
+.social-card>img {
+  width: 24px;
+  height: 24px;
+  align-self: center;
+}
+
+.footer-p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.footer-p:hover {
+  color: var(--primary);
+}
+
+.copyright:hover {
+  cursor: auto;
+  color: var(--dark);
+}
