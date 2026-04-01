@@ -1,1 +1,58 @@
 /* Gift page styles */
+
+main {
+    background-color: var(--primary);
+}
+
+.gift-section {
+    color: var(--static-white);
+    border-radius: 20px;
+    position: relative;
+}
+
+.gift-cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+
+.bg-garland {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1440px;
+    height: 200px;
+}
+
+.gift-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.gift-text-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 426px;
+    align-items: center;
+    text-align: center;
+}
+
+.gift-tabs {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.tabs {
+    border-radius: 12px;
+    height: 40px;
+}
+
+.tabs>.action-small {
+    padding: 12px 20px;
+}
