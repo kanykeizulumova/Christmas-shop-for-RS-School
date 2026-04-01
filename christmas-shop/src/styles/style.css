@@ -164,6 +164,11 @@ header {
   padding: 24px 20px;
 }
 
+.item>a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .desktop-only {
   display: none;
 }
@@ -272,4 +277,78 @@ header {
 .copyright:hover {
   cursor: auto;
   color: var(--dark);
+}
+
+.hero-section {
+  background-image: url('../../assets/bg-snow.png'),
+    url('../../assets/snowball.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0px;
+  min-height: 524px;
+  padding-top: 60px;
+  padding-right: 8px;
+  padding-bottom: 60px;
+  padding-left: 8px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+
+.hero-container {
+  height: 404px;
+  max-width: 426px;
+  gap: 12px;
+  opacity: 1;
+  padding: 60px 0;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  flex-direction: column;
+  text-align: center;
+  color: var(--static-white);
+}
+
+.hero-container>p {
+  text-align: center;
+  color: var(--static-white);
+}
+
+.hero-btn {
+  border-radius: 20px;
+  border-style: none;
+  background-color: var(--dark);
+  color: var(--static-white);
+  width: 235px;
+  height: 56px;
+  margin-left: 95.5px;
+  padding: 20px 0;
+}
+
+.hero-up {
+  margin: 0 0;
+}
+
+.hero {
+  margin: 0 0;
+  margin-left: -10px;
+  padding-right: -10px;
+}
+
+.hero-down {
+  padding-bottom: 60px;
+  margin: 0 0;
+}
+
+.about-section {
+  padding: 60px 8px;
+}
+
+.about-container {
+  background-color: var(--static-white);
+  border-radius: 20px;
+  max-width: 1276px;
+  display: flex;
+  flex-direction: row;
+  justify-self: center
 }
