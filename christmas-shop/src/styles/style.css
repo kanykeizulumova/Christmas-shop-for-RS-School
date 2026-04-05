@@ -111,6 +111,8 @@ p {
   background-color: var(--primary);
   background-image: url('../../assets/bg-snow.png');
   background-repeat: repeat;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 body {
@@ -118,6 +120,7 @@ body {
   margin: 0 auto;
   width: 100%;
   overflow-x: hidden;
+  background-color: var(--static-white);
 }
 
 header {
@@ -129,16 +132,16 @@ header {
   margin-left: 82px;
   margin-right: 82px;
   gap: 12px;
-  display: grid;
-  grid-template-columns: auto 1fr;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   color: var(--dark);
 }
 
 .logo {
   display: flex;
+  align-items: center;
   gap: 8px;
-  margin-top: 12px;
-  margin-bottom: 12px;
 }
 
 .logo>p {
@@ -155,7 +158,7 @@ header {
 
 .items-container {
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
   gap: 8px;
   color: var(--dark);
 }
@@ -163,12 +166,24 @@ header {
 .item {
   height: 40px;
   border-radius: 12px;
-  padding: 24px 20px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .item>a {
   text-decoration: none;
   color: inherit;
+}
+
+.item.active {
+  background: var(--Primary-10, #FF46461A);
+  border-radius: 12px;
+}
+
+.item.active>a {
+  color: var(--primary);
 }
 
 .desktop-only {
@@ -180,16 +195,12 @@ header {
   display: flex;
   flex-direction: column;
   gap: 60px;
-  cursor: pointer;
 }
 
 .footer-cards {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 12px;
-  border-radius: 60px;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 .footer-santa,
@@ -201,6 +212,8 @@ header {
   gap: 12px;
   border-radius: 20px;
   background-color: var(--content-background);
+  text-decoration: none;
+  color: inherit;
 }
 
 .santa-card,
@@ -209,8 +222,6 @@ header {
   width: 80px;
   height: 80px;
   margin-top: 20px;
-  margin-left: 168.67px;
-  margin-right: 168.67px;
 }
 
 .action-large {
@@ -270,6 +281,8 @@ header {
 .footer-p {
   margin-top: 0;
   margin-bottom: 0;
+  text-decoration: none;
+  color: inherit;
 }
 
 .footer-p:hover {
@@ -327,6 +340,11 @@ header {
   padding: 20px 0;
 }
 
+.hero-btn a {
+  color: var(--static-white);
+  text-decoration: none;
+}
+
 .hero-up {
   margin: 0 0;
 }
@@ -343,22 +361,30 @@ header {
 }
 
 .about-section {
-  padding: 60px 8px;
+  padding: 60px 82px;
 }
 
 .about-container {
   background-color: var(--static-white);
   border-radius: 20px;
   max-width: 1276px;
-  display: flex;
-  flex-direction: row;
-  justify-self: center
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .santa-about {
   border-radius: 20px;
   border-style: none;
-  height: 528px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-container {
+  overflow: hidden;
+  border-radius: 0 20px 20px 0;
 }
 
 .abt-container {
@@ -459,25 +485,23 @@ header {
 }
 
 .best-gifts-cards {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 12px;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 .gifts-card {
-  width: 310px;
-  height: 342px;
   border-radius: 20px;
   background-color: var(--content-background);
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .image-card>img {
-  width: 310px;
-  height: 230px;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .gifts-card-container {
@@ -510,4 +534,113 @@ header {
 
 .harmony {
   color: var(--tag-pink);
+}
+
+.cta-section {
+  position: relative;
+  min-height: 668px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  color: var(--static-white);
+  overflow: hidden;
+}
+
+.bg-forest {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+
+.cta-section-container {
+  max-width: 1276px;
+  margin: 60px auto;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-cont {
+  max-width: 426px;
+  margin: 60px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+.cta-cont>h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.cta-cont>button {
+  border-radius: 20px;
+  border-style: none;
+  background-color: var(--dark);
+  width: 235px;
+  height: 56px;
+  cursor: pointer;
+}
+
+.cta-cont>button>.action-small {
+  color: var(--static-white);
+}
+
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.timer-container>.caption {
+  margin: 0;
+}
+
+.countdown {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.countdown__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background-color: var(--static-white20);
+  border-radius: 12px;
+}
+
+.countdown__value {
+  font-family: var(--main-font);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 130%;
+  color: var(--static-white);
+}
+
+.countdown__label {
+  font-family: var(--main-font);
+  font-size: 8px;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--static-white);
+}
+
+.countdown__divider {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--static-white);
 }
