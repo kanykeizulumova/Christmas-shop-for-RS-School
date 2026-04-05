@@ -1,0 +1,1 @@
+{"version":3,"file":"gifts.821f41957b23e6ee98ce.js","mappings":"mBAGAA,QAAQC,IAAI,qC","sources":["webpack://christmas-shop/./src/gifts.js"],"sourcesContent":["import './styles/style.css';\nimport './styles/gift.css';\n\nconsole.log('Christmas Shop - Gifts page loaded');\n"],"names":["console","log"],"sourceRoot":""}
