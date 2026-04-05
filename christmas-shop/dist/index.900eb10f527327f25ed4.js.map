@@ -1,1 +1,0 @@
-{"version":3,"file":"index.900eb10f527327f25ed4.js","mappings":"mBAEAA,QAAQC,IAAI,oC","sources":["webpack://christmas-shop/./src/index.js"],"sourcesContent":["import './styles/style.css';\n\nconsole.log('Christmas Shop - Home page loaded');\n"],"names":["console","log"],"sourceRoot":""}
