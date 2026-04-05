@@ -21,24 +21,27 @@
   <header>
     <div class="header-container">
       <div class="logo">
-        <img src="./assets/snowflake.svg" alt="snowflake" class="snowflake">
+        <a href="./index.html"><img src="./assets/snowflake.svg" alt="snowflake" class="snowflake"> </a>
         <p class="action-small"> the gifts</p>
       </div>
       <div class="items-container">
-        <div class="item">
-          <p class="action-small">gifts</p>
+        <div class="item active">
+          <a href="./gifts.html" class="action-small">gifts</a>
         </div>
         <div class="item">
-          <p class="action-small">about</p>
+          <a href="./index.html#about" class="action-small">about</a>
         </div>
         <div class="item">
-          <p class="action-small">best</p>
+          <a href="./index.html#best" class="action-small">best</a>
         </div>
         <div class="item">
-          <p class="action-small">contacts</p>
+          <a href="#footer" class="action-small">contacts</a>
         </div>
       </div>
-      <div class="burger desktop-only"></div>
+      <div class="burger desktop-only">
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
     </div>
   </header>
   <main>
@@ -178,24 +181,24 @@
   <footer>
     <div class="footer-container">
       <div class="footer-cards">
-        <div class="footer-santa">
+        <a href="tel:+375291112233" class="footer-santa">
           <div class="santa-card"> <img src="./assets/santa-claus.svg" alt="santa-claus image"></div>
           <p class="action-large">+375 (29) 111-22-33</p>
           <h3 class="footer-header">Call Us</h3>
-        </div>
-        <div class="footer-tree">
+        </a>
+        <a href="https://www.google.com/maps/place/Bishkek" target="_blank" class="footer-tree">
           <div class="christmas-tree"> <img src="./assets/christmas-tree.svg" alt="christmas-tree image">
           </div>
           <p class="action-large">Magic forest</p>
           <h3 class="footer-header">meet us</h3>
-        </div>
-        <div class="footer-snake">
+        </a>
+        <a href="mailto:gifts@magic.com" class="footer-snake">
           <div class="snake-card"> <img src="./assets/snake.svg" alt="snake image"></div>
           <p class="action-large">gifts@magic.com</p>
           <h3 class="footer-header">write us</h3>
-        </div>
+        </a>
       </div>
-      <div class="footer-socials">
+      <div class="footer-socials" id="footer">
         <div class="socials-container">
           <div class="social-card">
             <img src="./assets/telegram.svg" alt="telegram icon">
@@ -211,7 +214,7 @@
           </div>
         </div>
         <p class="footer-p">© Copyright 2025, All Rights Reserved</p>
-        <p class="caption footer-p">Made in Rolling Scopes School</p>
+        <a href="https://rs.school/" target="_blank" class="caption footer-p">Made in Rolling Scopes School</a>
       </div>
     </div>
   </footer>
