@@ -22,21 +22,21 @@
   <header>
     <div class="header-container">
       <div class="logo">
-        <img src="./assets/snowflake.svg" alt="snowflake" class="snowflake">
+        <a href="./index.html"><img src="./assets/snowflake.svg" alt="snowflake" class="snowflake"> </a>
         <p class="action-small"> the gifts</p>
       </div>
       <div class="items-container">
         <div class="item">
-          <a href="" class="action-small">gifts</a>
+          <a href="./gifts.html" class="action-small">gifts</a>
         </div>
         <div class="item">
-          <a href="" class="action-small">about</a>
+          <a href="#about" class="action-small">about</a>
         </div>
         <div class="item">
-          <a href="" class="action-small">best</a>
+          <a href="#best" class="action-small">best</a>
         </div>
         <div class="item">
-          <a href="" class="action-small">contacts</a>
+          <a href="#footer" class="action-small">contacts</a>
         </div>
       </div>
       <div class="burger desktop-only">
@@ -52,12 +52,12 @@
         <p class="caption hero-up">Merry Christmas</p>
         <h1 class="hero">Gift yourself <br>the magic of new <br> possibilities</h1>
         <button class="hero-btn">
-          <a class="action-small">Explore Magical Gifts</a>
+          <a href="./gifts.html" class="action-small">Explore Magical Gifts</a>
         </button>
         <p class="caption hero-down">and Happy New Year</p>
       </div>
     </section>
-    <section class="about-section">
+    <section class="about-section" id="about">
       <div class="about-container">
         <div class="abt-container">
           <div class="about-text">
@@ -109,7 +109,7 @@
         </div>
       </div>
     </section>
-    <section class="best-gifts-section">
+    <section class="best-gifts-section" id="best">
       <div class="best-gifts-container">
         <div class="best-gifts-text">
           <p class="caption">Best Gifts</p>
@@ -161,11 +161,32 @@
         <div class="cta-cont">
           <h2>Ready to start your journey to a better version of yourself?</h2>
           <button>
-            <p class="action-small">Explore Magical Gifts</p>
+            <a href="./gifts.html" class="action-small">Explore Magical Gifts</a>
           </button>
           <div class="timer-container">
             <p class="caption">The New Year is Coming Soon...</p>
             <div class="timer">
+              <div class="countdown">
+                <div class="countdown__item">
+                  <span class="countdown__value">47</span>
+                  <span class="countdown__label">DAYS</span>
+                </div>
+                <div class="countdown__divider"></div>
+                <div class="countdown__item">
+                  <span class="countdown__value">5</span>
+                  <span class="countdown__label">HOURS</span>
+                </div>
+                <div class="countdown__divider"></div>
+                <div class="countdown__item">
+                  <span class="countdown__value">34</span>
+                  <span class="countdown__label">MINUTES</span>
+                </div>
+                <div class="countdown__divider"></div>
+                <div class="countdown__item">
+                  <span class="countdown__value">12</span>
+                  <span class="countdown__label">SECONDS</span>
+                </div>
+              </div>
 
             </div>
           </div>
@@ -176,24 +197,24 @@
   <footer>
     <div class="footer-container">
       <div class="footer-cards">
-        <div class="footer-santa">
+        <a href="tel:+375291112233" class="footer-santa">
           <div class="santa-card"> <img src="./assets/santa-claus.svg" alt="santa-claus image"></div>
           <p class="action-large">+375 (29) 111-22-33</p>
           <h3 class="footer-header">Call Us</h3>
-        </div>
-        <div class="footer-tree">
+        </a>
+        <a href="https://www.google.com/maps/place/Bishkek" target="_blank" class="footer-tree">
           <div class="christmas-tree"> <img src="./assets/christmas-tree.svg" alt="christmas-tree image">
           </div>
           <p class="action-large">Magic forest</p>
           <h3 class="footer-header">meet us</h3>
-        </div>
-        <div class="footer-snake">
+        </a>
+        <a href="mailto:gifts@magic.com" class="footer-snake">
           <div class="snake-card"> <img src="./assets/snake.svg" alt="snake image"></div>
           <p class="action-large">gifts@magic.com</p>
           <h3 class="footer-header">write us</h3>
-        </div>
+        </a>
       </div>
-      <div class="footer-socials">
+      <div class="footer-socials" id="footer">
         <div class="socials-container">
           <div class="social-card">
             <img src="./assets/telegram.svg" alt="telegram icon">
@@ -209,7 +230,7 @@
           </div>
         </div>
         <p class="footer-p copyright">© Copyright 2025, All Rights Reserved</p>
-        <p class="caption footer-p">Made in Rolling Scopes School</p>
+        <a href="https://rs.school/" target="_blank" class="caption footer-p">Made in Rolling Scopes School</a>
       </div>
     </div>
   </footer>
