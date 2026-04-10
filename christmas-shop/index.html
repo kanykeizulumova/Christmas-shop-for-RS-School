@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Christmas Shop</title>
+  <link rel="icon" type="image/x-icon" href="./assets/snowflake.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -15,16 +16,19 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
   <header>
     <div class="header-container">
-      <div class="logo">
-        <a href="./index.html"><img src="./assets/snowflake.svg" alt="snowflake" class="snowflake"> </a>
-        <p class="action-small"> the gifts</p>
-      </div>
+      <a href="./index.html">
+        <div class="logo">
+          <img src="./assets/snowflake.svg" alt="snowflake" class="snowflake">
+          <p class="action-small"> the gifts</p>
+        </div>
+      </a>
       <div class="items-container">
         <div class="item">
           <a href="./gifts.html" class="action-small">gifts</a>
@@ -40,8 +44,12 @@
         </div>
       </div>
       <div class="burger desktop-only">
-        <div class="bar"></div>
-        <div class="bar"></div>
+        <div class="bar">
+          <span></span>
+        </div>
+        <div class="bar">
+          <span></span>
+        </div>
       </div>
     </div>
   </header>
@@ -51,22 +59,18 @@
       <div class="hero-container">
         <p class="caption hero-up">Merry Christmas</p>
         <h1 class="hero">Gift yourself <br>the magic of new <br> possibilities</h1>
-        <button class="hero-btn">
-          <a href="./gifts.html" class="action-small">Explore Magical Gifts</a>
-        </button>
+        <a href="./gifts.html" class="action-small btn">Explore Magical Gifts</a>
         <p class="caption hero-down">and Happy New Year</p>
       </div>
     </section>
     <section class="about-section" id="about">
       <div class="about-container">
-        <div class="abt-container">
-          <div class="about-text">
-            <p class="caption">About</p>
-            <h2>Unleash your inner superhero!</h2>
-            <p class="abt-p">This New Year marks the beginning of your journey to inner harmony and new
-              strengths. We
-              offer unique gifts that will help you improve your life.</p>
-          </div>
+        <div class="about-text">
+          <p class="caption">About</p>
+          <h2>Unleash your inner superhero!</h2>
+          <p class="abt-p">This New Year marks the beginning of your journey to inner harmony and new
+            strengths. We
+            offer unique gifts that will help you improve your life.</p>
         </div>
         <div class="image-container">
           <img src="./assets/santa.png" alt="santa image" class="santa-about">
@@ -80,25 +84,24 @@
           <h2>in the new 2025</h2>
         </div>
         <div class="slider-row">
-          <div class="row-container">
-            <p class="slider-text">Live</p>
-            <div class="slider-image-container">
-              <img src="./assets/snowman.png" alt="snowman">
-            </div>
-            <p class="slider-text">create</p>
-            <div class="slider-image-container">
-              <img src="./assets/christmas-trees.png" alt="christmas-tree">
-            </div>
-            <p class="slider-text">Love</p>
-            <div class="slider-image-container">
-              <img src="./assets/christmas-tree-ball.png" alt="christmas-tree-ball">
-            </div>
-            <p class="slider-text">dream</p>
-            <div class="slider-image-container">
-              <img src="./assets/fairytale-house.png" alt="fairytale-house">
-            </div>
+          <p class="slider-text">Live</p>
+          <div class="slider-image-container">
+            <img src="./assets/snowman.png" alt="snowman">
+          </div>
+          <p class="slider-text">create</p>
+          <div class="slider-image-container">
+            <img src="./assets/christmas-trees.png" alt="christmas-tree">
+          </div>
+          <p class="slider-text">Love</p>
+          <div class="slider-image-container">
+            <img src="./assets/christmas-tree-ball.png" alt="christmas-tree-ball">
+          </div>
+          <p class="slider-text">dream</p>
+          <div class="slider-image-container">
+            <img src="./assets/fairytale-house.png" alt="fairytale-house">
           </div>
         </div>
+
         <div class="slider-arrow">
           <button class="arrow-left">
             <img src="./assets/arrow-left.png" alt="arrow-left">
@@ -121,7 +124,7 @@
               <img src="./assets/gift-for-work.png" alt="gift-for-work">
             </div>
             <div class="gifts-card-container">
-              <h4 class="work">For work</h4>
+              <p class="work h4">For work</p>
               <h3>Console.log Guru</h3>
             </div>
           </div>
@@ -130,7 +133,7 @@
               <img src="./assets/gift-for-health.png" alt="gift-for-health">
             </div>
             <div class="gifts-card-container">
-              <h4 class="health">For health</h4>
+              <p class="health h4">For health</p>
               <h3>Hydration Bot</h3>
             </div>
           </div>
@@ -139,7 +142,7 @@
               <img src="./assets/gift-for-work.png" alt="gift-for-work">
             </div>
             <div class="gifts-card-container">
-              <h4 class="work">For work</h4>
+              <p class="work h4">For work</p>
               <h3>Merge Master</h3>
             </div>
           </div>
@@ -148,7 +151,7 @@
               <img src="./assets/gift-for-harmony.png" alt="gift-for-harmony">
             </div>
             <div class="gifts-card-container">
-              <h4 class="harmony">For harmony</h4>
+              <p class="harmony h4">For harmony</p>
               <h3>Spontaneous Coding Philosopher</h3>
             </div>
           </div>
@@ -156,38 +159,32 @@
       </div>
     </section>
     <section class="cta-section">
-      <img src="./assets/bg-forest.png" alt="christmas forest" class="bg-forest">
       <div class="cta-section-container">
         <div class="cta-cont">
           <h2>Ready to start your journey to a better version of yourself?</h2>
-          <button>
-            <a href="./gifts.html" class="action-small">Explore Magical Gifts</a>
-          </button>
+          <a href="./gifts.html" class="action-small btn">Explore Magical Gifts</a>
           <div class="timer-container">
             <p class="caption">The New Year is Coming Soon...</p>
             <div class="timer">
-              <div class="countdown">
-                <div class="countdown__item">
-                  <span class="countdown__value">47</span>
-                  <span class="countdown__label">DAYS</span>
-                </div>
-                <div class="countdown__divider"></div>
-                <div class="countdown__item">
-                  <span class="countdown__value">5</span>
-                  <span class="countdown__label">HOURS</span>
-                </div>
-                <div class="countdown__divider"></div>
-                <div class="countdown__item">
-                  <span class="countdown__value">34</span>
-                  <span class="countdown__label">MINUTES</span>
-                </div>
-                <div class="countdown__divider"></div>
-                <div class="countdown__item">
-                  <span class="countdown__value">12</span>
-                  <span class="countdown__label">SECONDS</span>
-                </div>
+              <div class="countdown__item">
+                <span class="countdown__value">47</span>
+                <span class="countdown__label">DAYS</span>
               </div>
-
+              <div class="countdown__divider">|</div>
+              <div class="countdown__item">
+                <span class="countdown__value">5</span>
+                <span class="countdown__label">HOURS</span>
+              </div>
+              <div class="countdown__divider">|</div>
+              <div class="countdown__item">
+                <span class="countdown__value">34</span>
+                <span class="countdown__label">MINUTES</span>
+              </div>
+              <div class="countdown__divider">|</div>
+              <div class="countdown__item">
+                <span class="countdown__value">12</span>
+                <span class="countdown__label">SECONDS</span>
+              </div>
             </div>
           </div>
         </div>
@@ -217,16 +214,16 @@
       <div class="footer-socials" id="footer">
         <div class="socials-container">
           <div class="social-card">
-            <img src="./assets/telegram.svg" alt="telegram icon">
+            <a href="https://telegram.org/"> <img src="./assets/telegram.svg" alt="telegram icon"></a>
           </div>
           <div class="social-card">
-            <img src="./assets/facebook.svg" alt="facebook icon">
+            <a href="https://www.facebook.com/?locale=ru_RU"><img src="./assets/facebook.svg" alt="facebook icon"></a>
           </div>
           <div class="social-card">
-            <img src="./assets/instagram.svg" alt="instagram icon">
+            <a href="https://www.instagram.com/"><img src="./assets/instagram.svg" alt="instagram icon"></a>
           </div>
           <div class="social-card">
-            <img src="./assets/X.svg" alt="x icon">
+            <a href="https://x.com/?lang=ru"><img src="./assets/X.svg" alt="x icon"></a>
           </div>
         </div>
         <p class="footer-p copyright">© Copyright 2025, All Rights Reserved</p>
