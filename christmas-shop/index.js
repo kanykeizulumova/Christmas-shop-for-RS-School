@@ -1,5 +1,4 @@
 
-console.log('Christmas Shop - Home page loaded');
 
 const burger = document.getElementById('burger');
 const menu = document.getElementById('nav-menu');
@@ -61,4 +60,49 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     updateTimer();
     const timerId = setInterval(updateTimer, 1000);
+});
+
+
+const sliderRow = document.querySelector('.slider-row');
+const sliderViewport = document.querySelector('.slider-viewport');
+const btnLeft = document.querySelector('.arrow-left');
+const btnRight = document.querySelector('.arrow-right');
+
+let currentStep = 0;
+let maxSteps;
+
+function updateSlider() {
+    if (window.innerWidth > 768) {
+        maxSteps = 3;
+    } else {
+        maxSteps = 6;
+    }
+    const totalWidth = sliderRow.scrollWidth;
+    const viewportWidth = sliderViewport.clientWidth;
+    const availableScroll = totalWidth - viewportWidth;
+    const stepWidth = availableScroll / maxSteps;
+    const transformValue = currentStep * stepWidth;
+    sliderRow.style.transform = `translateX(-${transformValue}px)`;
+    btnLeft.disabled = (currentStep === 0);
+    btnRight.disabled = (currentStep === maxSteps);
+    console.log({ totalWidth, viewportWidth, availableScroll, stepWidth });
+}
+
+updateSlider();
+btnLeft.addEventListener('click', () => {
+    if (currentStep > 0) {
+        currentStep--;
+        updateSlider();
+    }
+});
+btnRight.addEventListener('click', () => {
+    if (currentStep < maxSteps) {
+        currentStep++;
+        updateSlider();
+    }
+});
+
+window.addEventListener('resize', () => {
+    currentStep = 0;
+    updateSlider();
 });
