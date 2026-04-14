@@ -799,10 +799,6 @@ body.lock {
     display: none;
   }
 
-  .desktop-only {
-    display: flex;
-  }
-
 
   .best-gifts-section {
     padding-top: 55px;
