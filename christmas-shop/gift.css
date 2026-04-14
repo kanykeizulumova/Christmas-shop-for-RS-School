@@ -18,10 +18,10 @@ main {
 
 .gift-cards-container {
     display: flex;
+    justify-content: center;
     gap: 12px;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-left: 75px;
 }
 
 
@@ -77,11 +77,7 @@ main {
     cursor: pointer;
 }
 
-@media (max-width: 800px) {
-    .gift-cards-container {
-        padding-left: 60px;
-    }
-}
+
 
 @media (max-width: 400px) {
     .gift-tabs {
@@ -90,9 +86,5 @@ main {
 
     .tabs>.action-small {
         padding: 12px 8px;
-    }
-
-    .gift-cards-container {
-        padding-left: 27px;
     }
 }
