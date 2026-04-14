@@ -180,6 +180,11 @@ header {
   justify-content: center;
 }
 
+.item:hover {
+  color: var(--primary);
+  background-color: #FF46461A;
+}
+
 .item>a {
   text-decoration: none;
   color: inherit;
@@ -395,7 +400,6 @@ header {
 .santa-about {
   border-radius: 20px;
   border-style: none;
-  width: 100%;
   height: 100%;
   object-fit: cover;
 }
@@ -408,23 +412,23 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
-.about-text {
+.about-wrapper {
   max-width: 426px;
   margin-left: 60px;
   padding: 60px 0px;
 }
 
-.about-text>.caption {
+.about-text>.about-wrapper>.caption {
   color: var(--primary);
 }
 
-.about-text>.abt-p {
+.about-text>.about-wrapper>.abt-p {
   padding-bottom: 5px;
 }
-
-.about-text>h2 {}
 
 .slider-container {
   display: flex;
@@ -477,7 +481,25 @@ header {
   width: 56px;
   height: 56px;
   border-radius: 20px;
-  border: 1px solid var(--static-white, #FFFFFF)
+  border: 1px solid var(--static-white, #FFFFFF);
+  transition: background-color 0.3s ease;
+}
+
+.icon {
+  stroke: var(--static-white);
+  fill: none;
+  transition: fill 0.3s ease;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+  background-color: var(--static-white);
+  cursor: pointer;
+}
+
+.arrow-left:hover .icon,
+.arrow-right:hover .icon {
+  stroke: var(--primary);
 }
 
 .best-gifts-container {
@@ -498,6 +520,7 @@ header {
 .best-gifts-text>.caption,
 .best-gifts-text>h2 {
   text-align: center;
+  margin: 0;
 }
 
 .best-gifts-cards {
@@ -505,14 +528,18 @@ header {
   flex-direction: row;
   gap: 12px;
   justify-content: center;
+  flex-wrap: wrap;
+
 }
 
 .gifts-card {
   border-radius: 20px;
   background-color: var(--content-background);
-  display: flex;
-  flex-direction: column;
   overflow: hidden;
+  width: 310px;
+  height: 342px;
+  opacity: 1;
+
 }
 
 .image-card>img {
@@ -529,16 +556,17 @@ header {
 }
 
 .gifts-card-container>p {
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-bottom: 8px;
+  padding-top: 20px;
+  padding-left: 20px;
+  margin: 0;
 }
 
 .gifts-card-container>h3 {
   color: var(--dark);
-  margin-top: 8px;
-  margin-left: 20px;
-  margin-bottom: auto;
+  padding-top: 8px;
+  padding-left: 20px;
+  padding-bottom: 40px;
+  margin: 0;
 }
 
 .work {
@@ -590,6 +618,7 @@ header {
 .cta-cont>h2 {
   margin-top: 0;
   margin-bottom: 0;
+  padding-top: 60px;
 }
 
 .cta-cont>button {
@@ -678,20 +707,7 @@ header {
   background-color: #000;
 }
 
-@media (max-width: 768px) {
-  .header-container {
-    padding: 0 8px;
-    margin: 0;
-  }
-
-  .items-container {
-    display: none;
-  }
-
-  .desktop-only {
-    display: flex;
-  }
-
+@media (max-width: 1060px) {
   .footer-cards {
     flex-direction: column;
     flex-wrap: wrap;
@@ -707,6 +723,28 @@ header {
     width: 100%;
   }
 
+}
+
+@media (max-width: 800px) {
+  .header-container {
+    padding: 0 8px;
+    margin: 0;
+  }
+
+  .items-container {
+    display: none;
+  }
+
+  .desktop-only {
+    display: flex;
+  }
+
+
+  .best-gifts-section {
+    padding-top: 55px;
+    padding-bottom: 60px;
+  }
+
   .best-gifts-cards {
     flex-wrap: wrap;
   }
@@ -716,9 +754,11 @@ header {
     margin: 0 8px;
   }
 
-  .about-text {
-    max-width: 50%;
+  .about-wrapper {
+    margin-left: 0;
+    padding: 46px 60px;
   }
+
 
   .slider-container {
     margin: 0 8px;
@@ -731,4 +771,86 @@ header {
   .slider-arrow {
     margin: 0;
   }
+
+  .best-gifts-container {
+    margin: 0 8px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .about-container {
+    flex-wrap: wrap;
+  }
+
+  .image-container {
+    max-width: 100%;
+    margin-top: -20px;
+  }
+}
+
+@media (max-width: 380px) {
+
+  .gifts-card-container>h3 {
+    margin-top: 3px;
+  }
+
+  .about-container {
+    flex-wrap: wrap;
+  }
+
+  .about-wrapper {
+    padding: 60px 20px;
+  }
+
+  .about-section {
+    margin-top: 47px;
+  }
+
+  .about-wrapper>.caption {
+    margin: 0;
+  }
+
+
+  .image-container {
+    max-width: 100%;
+    margin-top: -20px;
+  }
+
+  .santa-about {
+    width: auto;
+  }
+
+  .timer-container {
+    padding-bottom: 60px;
+  }
+}
+
+img,
+canvas,
+video {
+  overflow: clip !important;
+  /* или visible, если браузер ругается на clip */
+}
+
+
+/*.image-container {
+    overflow: hidden;
+    border-radius: 0 20px 20px 0;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+    height: 100%;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    */
+
+.menu {
+  display: none;
+}
+
+.menu.open {
+  display: block;
 }

@@ -29,7 +29,7 @@
           <p class="action-small"> the gifts</p>
         </div>
       </a>
-      <div class="items-container">
+      <div class="items-container" id="menu">
         <div class="item">
           <a href="./gifts.html" class="action-small">gifts</a>
         </div>
@@ -43,7 +43,7 @@
           <a href="#footer" class="action-small">contacts</a>
         </div>
       </div>
-      <div class="burger desktop-only">
+      <div class="burger desktop-only" id="burger">
         <div class="bar">
           <span></span>
         </div>
@@ -66,11 +66,13 @@
     <section class="about-section" id="about">
       <div class="about-container">
         <div class="about-text">
-          <p class="caption">About</p>
-          <h2>Unleash your inner superhero!</h2>
-          <p class="abt-p">This New Year marks the beginning of your journey to inner harmony and new
-            strengths. We
-            offer unique gifts that will help you improve your life.</p>
+          <div class="about-wrapper">
+            <p class="caption">About</p>
+            <h2>Unleash your inner superhero!</h2>
+            <p class="abt-p">This New Year marks the beginning of your journey to inner harmony and new
+              strengths. We
+              offer unique gifts that will help you improve your life.</p>
+          </div>
         </div>
         <div class="image-container">
           <img src="./assets/santa.png" alt="santa image" class="santa-about">
@@ -104,10 +106,17 @@
 
         <div class="slider-arrow">
           <button class="arrow-left">
-            <img src="./assets/arrow-left.png" alt="arrow-left">
+            <svg class="icon" width="14" height="13" viewBox="0 0 14 13" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 6.5H0.5M0.5 6.5L6.5 0.5M0.5 6.5L6.5 12.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
           </button>
           <button class="arrow-right">
-            <img src="./assets/arrow-right.png" alt="arrow-right">
+            <svg class="icon" width="14" height="13" viewBox="0 0 14 13" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.5 6.5H13M13 6.5L7 0.5M13 6.5L7 12.5" stroke-linejoin="round" />
+            </svg>
+
           </button>
         </div>
       </div>
@@ -152,7 +161,7 @@
             </div>
             <div class="gifts-card-container">
               <p class="harmony h4">For harmony</p>
-              <h3>Spontaneous Coding Philosopher</h3>
+              <h3>Spontaneous Coding <br>Philosopher</h3>
             </div>
           </div>
         </div>
