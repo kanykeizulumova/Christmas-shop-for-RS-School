@@ -704,6 +704,16 @@ header {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  border: none;
+  background-color: inherit;
+}
+
+.burger.active .burger-line:nth-child(1) {
+  transform: translateY(1px) rotate(45deg);
+}
+
+.burger.active .burger-line:nth-child(2) {
+  transform: translateY(-9px) rotate(-45deg);
 }
 
 .bar {
@@ -711,6 +721,54 @@ header {
   width: 20px;
   border-radius: 1px;
   background-color: #000;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.nav-menu {
+  position: fixed;
+  top: 60px;
+  right: -100%;
+  width: 100%;
+  height: calc(100vh - 60px);
+  background-color: #fff;
+  transition: right 0.5s ease;
+  z-index: 10;
+}
+
+.nav-menu.open {
+  right: 0;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 32px;
+  list-style: none;
+  padding-top: 152px;
+  padding-left: 4px;
+}
+
+.nav-link {
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+}
+
+@media (min-width: 769px) {
+  .nav-menu {
+    display: none;
+  }
 }
 
 @media (max-width: 1060px) {
@@ -829,6 +887,11 @@ header {
 
   .timer-container {
     padding-bottom: 60px;
+  }
+
+  .nav-list {
+    padding-top: 0px;
+    margin-top: -13px;
   }
 }
 
