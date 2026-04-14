@@ -539,8 +539,13 @@ header {
   width: 310px;
   height: 342px;
   opacity: 1;
-
+  cursor: pointer;
 }
+
+.gifts-card:hover .gifts-card-container h3 {
+  color: var(--primary);
+}
+
 
 .image-card>img {
   width: 100%;
@@ -567,6 +572,7 @@ header {
   padding-left: 20px;
   padding-bottom: 40px;
   margin: 0;
+  transition: color 0.3s ease;
 }
 
 .work {
