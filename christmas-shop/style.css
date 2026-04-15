@@ -287,15 +287,14 @@ header {
   height: 40px;
 }
 
-.social-card:hover {
-  background: #06A44F1A;
+.social-logo {
+  stroke: var(--dark);
+  stroke-width: 1.5;
+  fill: none;
 }
 
-
-.social-card>img {
-  width: 24px;
-  height: 24px;
-  align-self: center;
+.social-card>a:hover .social-logo {
+  stroke: var(--primary);
 }
 
 .footer-p {
