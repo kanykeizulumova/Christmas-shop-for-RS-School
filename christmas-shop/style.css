@@ -557,6 +557,10 @@ header {
   cursor: pointer;
 }
 
+.gifts-card.hide {
+  display: none;
+}
+
 .gifts-card:hover .gifts-card-container h3 {
   color: var(--primary);
 }
@@ -920,4 +924,8 @@ video {
 
 .menu.open {
   display: block;
+}
+
+.hide {
+  display: none;
 }

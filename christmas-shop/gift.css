@@ -60,8 +60,10 @@ main {
     transition: background-color 0.3s;
 }
 
-.tabs:first-child {
-    background-color: var(--static-white20)
+.tabs .active {
+    background-color: var(--static-white20);
+    border-radius: 12px;
+    transition: opacity 0.3s ease;
 }
 
 .tabs:first-child>.action-small {

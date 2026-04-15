@@ -17,3 +17,30 @@ navLinks.forEach(link => {
         }
     });
 });
+
+const tabs = document.querySelectorAll('.gift-tabs .action-small');
+const cards = document.querySelectorAll('.gifts-card');
+
+function filterCards(filterValue) {
+    cards.forEach(card => {
+        if (filterValue === 'all' || card.dataset.filter === filterValue) {
+            card.classList.remove('hide');
+        } else {
+            card.classList.add('hide');
+        }
+    });
+}
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', (e) => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const filterValue = tab.dataset.filter;
+
+        filterCards(filterValue);
+    });
+});
+
+
+
