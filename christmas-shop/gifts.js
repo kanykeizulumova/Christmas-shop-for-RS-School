@@ -42,5 +42,28 @@ tabs.forEach(tab => {
     });
 });
 
+const scrollToUp = {
+    el: document.querySelector('.scroll-top'),
+    show() {
+        this.el.classList.remove('scroll-top_hide');
+    },
+    hide() {
+        this.el.classList.add('scroll-top_hide');
+    },
+    addEventListener() {
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY || document.documentElement.scrollTop;
+            scrollY > 300 ? this.show() : this.hide();
+        });
+        document.querySelector('.scroll-top').onclick = () => {
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+            });
+        }
+    }
+}
 
+scrollToUp.addEventListener();
 

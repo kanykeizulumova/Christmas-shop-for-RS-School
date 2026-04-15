@@ -79,7 +79,28 @@ main {
     cursor: pointer;
 }
 
+@media (max-width: 768px) {
 
+    .scroll-top {
+        background-color: var(--static-white);
+        border: 1px solid var(--Primary, #FF4646);
+        border-radius: 100px;
+        width: 56px;
+        height: 56px;
+        position: fixed;
+        right: 8px;
+        bottom: 8px;
+        cursor: pointer;
+    }
+
+    .scroll-top_hide {
+        display: none;
+    }
+}
+
+.scroll-top_hide {
+    display: none;
+}
 
 @media (max-width: 400px) {
     .gift-tabs {
