@@ -22,6 +22,8 @@ const tabs = document.querySelectorAll('.gift-tabs .action-small');
 const cards = document.querySelectorAll('.gifts-card');
 
 function filterCards(filterValue) {
+    const cards = document.querySelectorAll('.gifts-card');
+
     cards.forEach(card => {
         if (filterValue === 'all' || card.dataset.filter === filterValue) {
             card.classList.remove('hide');
@@ -91,7 +93,47 @@ async function loadData() {
     } catch (error) {
         console.error('Ошибка загрузки:', error);
     }
+
+    renderCards(catalogData);
 }
+
+function renderCards(data) {
+    const container = document.querySelector('.gift-cards-container');
+    container.innerHTML = '';
+    data.forEach(item => {
+        const giftsCard = document.createElement('div');
+        giftsCard.classList.add('gifts-card');
+        giftsCard.setAttribute('data-filter', item.category.toLowerCase().replace('for ', ''));
+
+        const imageCard = document.createElement('div');
+        imageCard.classList.add('image-card');
+
+        const img = document.createElement('img');
+        img.src = item.image;
+        img.alt = item.name;
+
+        imageCard.appendChild(img);
+
+        const cardContainer = document.createElement('div');
+        cardContainer.classList.add('gifts-card-container');
+
+        const p = document.createElement('p');
+        p.classList.add(item.category.toLowerCase().replace('for ', ''), 'h4');
+        p.textContent = item.category;
+
+        const h3 = document.createElement('h3');
+        h3.textContent = item.name;
+
+        cardContainer.append(p, h3);
+
+        giftsCard.append(imageCard, cardContainer);
+
+        container.appendChild(giftsCard);
+
+    })
+    filterCards('all');
+}
+
 
 document.querySelector('.gift-cards-container').addEventListener('click', (event) => {
     const card = event.target.closest('.gifts-card');
