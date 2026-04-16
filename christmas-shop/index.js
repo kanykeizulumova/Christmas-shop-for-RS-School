@@ -9,7 +9,14 @@ const navLinks = document.querySelectorAll('.nav-link');
 function toggleMenu() {
     burger.classList.toggle('active');
     menu.classList.toggle('open');
-    body.classList.toggle('lock');
+    
+    if (menu.classList.contains('open')) {
+        body.classList.add('lock');
+        document.documentElement.classList.add('lock');
+    } else {
+        body.classList.remove('lock');
+        document.documentElement.classList.remove('lock');
+    }
 }
 burger.addEventListener('click', toggleMenu);
 
@@ -26,6 +33,7 @@ window.addEventListener('resize', () => {
         burger.classList.remove('active');
         menu.classList.remove('open');
         body.classList.remove('lock');
+        document.documentElement.classList.remove('lock');
     }
 });
 
