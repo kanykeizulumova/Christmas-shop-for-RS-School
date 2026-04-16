@@ -743,6 +743,7 @@ header {
 
 body.lock {
   overflow: hidden;
+  height: 100vh;
 }
 
 .nav-menu {
