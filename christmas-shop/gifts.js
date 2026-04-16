@@ -70,20 +70,16 @@ scrollToUp.addEventListener();
 let modal = document.getElementById("myModal");
 
 let span = document.getElementsByClassName("close")[0];
-
-
-span.onclick = function () {
+function closeModal() {
     modal.style.display = "none";
-    body.classList.toggle('lock');
-
+    body.classList.remove('lock');
 }
-
+span.onclick = closeModal;
 window.onclick = function (event) {
     if (event.target == modal) {
-        modal.style.display = "none";
+        closeModal();
     }
 }
-
 
 let catalogData = [];
 
@@ -153,4 +149,5 @@ function showModal(info) {
     `;
 
     modal.style.display = 'flex';
+    body.classList.add('lock');
 }
