@@ -1,3 +1,5 @@
+import './style.css';
+import './gift.css';
 const burger = document.getElementById('burger');
 const menu = document.getElementById('nav-menu');
 const body = document.body;
@@ -75,6 +77,7 @@ let span = document.getElementsByClassName("close")[0];
 function closeModal() {
     modal.style.display = "none";
     body.classList.remove('lock');
+    document.documentElement.classList.remove('lock');
 }
 span.onclick = closeModal;
 window.onclick = function (event) {
@@ -192,4 +195,5 @@ function showModal(info) {
 
     modal.style.display = 'flex';
     body.classList.add('lock');
+    document.documentElement.classList.add('lock');
 }

@@ -8,8 +8,8 @@ module.exports = (env, argv) => {
 
   return {
     entry: {
-      index: './src/index.js',
-      gifts: './src/gifts.js',
+      index: './index.js',
+      gifts: './gifts.js',
     },
 
     output: {
@@ -21,7 +21,7 @@ module.exports = (env, argv) => {
 
     devServer: {
       static: './dist',
-      port: 3000,
+      port: 3002,
       hot: true,
       open: true,
     },
@@ -48,12 +48,12 @@ module.exports = (env, argv) => {
 
     plugins: [
       new HtmlWebpackPlugin({
-        template: './src/index.html',
+        template: './index.html',
         filename: 'index.html',
         chunks: ['index'],
       }),
       new HtmlWebpackPlugin({
-        template: './src/gifts.html',
+        template: './gifts.html',
         filename: 'gifts.html',
         chunks: ['gifts'],
       }),
@@ -70,6 +70,10 @@ module.exports = (env, argv) => {
             from: 'assets',
             to: 'assets',
             noErrorOnMissing: true,
+          },
+          {
+            from: 'gifts.json',
+            to: 'gifts.json',
           },
         ],
       }),
