@@ -67,3 +67,61 @@ const scrollToUp = {
 
 scrollToUp.addEventListener();
 
+let modal = document.getElementById("myModal");
+
+let span = document.getElementsByClassName("close")[0];
+
+
+span.onclick = function () {
+    modal.style.display = "none";
+    body.classList.toggle('lock');
+
+}
+
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+let catalogData = [];
+
+async function loadData() {
+    try {
+        const response = await fetch('./gifts.json');
+        catalogData = await response.json();
+        console.log('Данные загружены');
+    } catch (error) {
+        console.error('Ошибка загрузки:', error);
+    }
+}
+
+document.querySelector('.gift-cards-container').addEventListener('click', (event) => {
+    const card = event.target.closest('.gifts-card');
+
+    if (card) {
+        const cardTitle = card.querySelector('h3').textContent.trim();
+
+        const foundData = catalogData.find(item => item.name === cardTitle);
+
+        if (foundData) {
+            showModal(foundData);
+        }
+    }
+});
+
+loadData();
+
+function showModal(info) {
+    document.querySelector('#modal-img').src = info.image;
+    document.querySelector('#modal-name').textContent = info.name;
+    document.querySelector('#description').textContent = info.description;
+    document.querySelector('#category').textContent = info.category;
+    document.querySelector('#live').textContent = `Live ${info.superpowers.live}`;
+    document.querySelector('#create').textContent = `Create ${info.superpowers.create}`;
+    document.querySelector('#love').textContent = `Love ${info.superpowers.love}`;
+    document.querySelector('#dream').textContent = `Dream ${info.superpowers.dream}`;
+
+    modal.style.display = 'flex';
+}
