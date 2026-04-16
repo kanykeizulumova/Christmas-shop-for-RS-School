@@ -166,9 +166,73 @@ main {
     line-height: 148%;
     letter-spacing: 0%;
     color: var(--dark);
+    padding: 0;
 }
 
 #modal-img {
     width: 400px;
     height: 230px;
+}
+
+.stars {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#modal-card-container {
+    padding-left: 20px;
+    padding-top: 20px;
+    gap: 8px;
+}
+
+#superpowers {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+#superpowers>p {
+    margin: 0;
+    padding-bottom: 8px;
+}
+
+#category,
+#modal-name {
+    padding: 0;
+}
+
+.superpower-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.superpower-data {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.superpower-data>span {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 148%;
+    letter-spacing: 0%;
+}
+
+.stars-wrapper {
+    display: flex;
+    gap: 8px;
+    padding-right: 20px;
+}
+
+.superpower-name {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 148%;
+    letter-spacing: 0%;
 }
