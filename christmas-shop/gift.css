@@ -58,25 +58,27 @@ main {
     justify-content: center;
     cursor: pointer;
     transition: background-color 0.3s;
-}
 
-.tabs .active {
-    background-color: var(--static-white20);
-    border-radius: 12px;
-    transition: opacity 0.3s ease;
-}
+    &:first-child>.action-small {
+        color: var(--static-white);
+    }
 
-.tabs:first-child>.action-small {
-    color: var(--static-white);
-}
+    &:hover {
+        background-color: var(--static-white20);
+    }
 
-.tabs:hover {
-    background-color: var(--static-white20);
-}
+    &>.action-small {
+        padding: 12px 20px;
+        cursor: pointer;
+    }
 
-.tabs>.action-small {
-    padding: 12px 20px;
-    cursor: pointer;
+    .active {
+        background-color: var(--static-white20);
+        border-radius: 12px;
+        transition: opacity 0.3s ease;
+    }
+
+
 }
 
 
@@ -119,4 +121,3 @@ main {
         padding: 12px 8px;
     }
 }
-
