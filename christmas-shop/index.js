@@ -87,10 +87,18 @@ function updateSlider() {
         maxSteps = 6;
     }
     const totalWidth = sliderRow.scrollWidth;
+    
+    // Get the actual visible width between paddings
+    const style = window.getComputedStyle(sliderViewport);
+    const paddingLeft = parseFloat(style.paddingLeft);
+    const paddingRight = parseFloat(style.paddingRight);
     const viewportWidth = sliderViewport.clientWidth;
-    const availableScroll = totalWidth - viewportWidth;
+    const contentWidth = viewportWidth - paddingLeft - paddingRight;
+    
+    const availableScroll = totalWidth - contentWidth;
     const stepWidth = availableScroll / maxSteps;
     const transformValue = currentStep * stepWidth;
+    
     sliderRow.style.transform = `translateX(-${transformValue}px)`;
     btnLeft.disabled = (currentStep === 0);
     btnRight.disabled = (currentStep === maxSteps);
