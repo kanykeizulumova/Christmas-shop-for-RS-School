@@ -998,6 +998,8 @@ video {
   padding-left: 20px;
   padding-top: 20px;
   gap: 8px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 #superpowers {
